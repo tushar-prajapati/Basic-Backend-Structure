@@ -15,9 +15,7 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: 'Internal Server Error', details: err.message });
   });
-  
-import adminRouter from "./routes/admin.routes.js";
-app.use("/api/v1/admins", adminRouter)
+
 
 import userRouter from "./routes/user.routes.js"
 app.use("/api/v1/users", userRouter)
